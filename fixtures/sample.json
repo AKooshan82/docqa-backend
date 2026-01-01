@@ -1,0 +1,36 @@
+[
+  { "model": "docqa.tag", "pk": 1, "fields": { "name": "policy", "slug": "policy" } },
+  { "model": "docqa.tag", "pk": 2, "fields": { "name": "finance", "slug": "finance" } },
+
+  {
+    "model": "docqa.document",
+    "pk": 1,
+    "fields": {
+      "title": "Document A",
+      "text": "Sample policy doc.\n\nIt explains basic guidelines.",
+      "date": "2025-01-15",
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "docqa.document",
+    "pk": 2,
+    "fields": {
+      "title": "Document B",
+      "text": "Sample finance doc.\n\nIt discusses budgets and forecasting.",
+      "date": "2025-02-10",
+      "created_at": "2025-02-10T10:00:00Z"
+    }
+  },
+
+  {
+    "model": "docqa.question",
+    "pk": 1,
+    "fields": {
+      "question_text": "What does the policy say about compliance?",
+      "answer_text": "",
+      "created_at": "2025-03-01T10:00:00Z",
+      "updated_at": "2025-03-01T10:00:00Z"
+    }
+  }
+]
