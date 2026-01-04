@@ -1,4 +1,3 @@
-````markdown
 # DocQA Backend (Django Admin + Retrieval + LLM Q&A)
 
 A Django backend that lets you manage **Documents**, **Tags**, and **Questions** in the **Django Admin panel**, retrieve relevant documents for a question (TF-IDF), and generate an answer using an LLM (LangChain + Ollama).
