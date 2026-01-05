@@ -31,7 +31,6 @@ class Document(models.Model):
         is_new = self.pk is None
         super().save(*args, **kwargs)
 
-        # If a PDF exists and we don't have extracted text yet, extract it once.
         if self.pdf and (is_new or not self.extracted_text.strip()):
             from docqa.services.pdf_extract import extract_pdf_text
 
@@ -40,7 +39,6 @@ class Document(models.Model):
             except Exception:
                 text = ""
 
-            # Avoid recursion by updating via queryset
             Document.objects.filter(pk=self.pk).update(extracted_text=text)
 
 
